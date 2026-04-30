@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker with Streaks</title>
+    <!-- Modern Clean Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container glass">
+        <header>
+            <h1>Habit Tracker <span class="fire">🔥</span></h1>
+            <p>Build better habits, one day at a time.</p>
+        </header>
+
+        <div class="profiles-section">
+            <div class="profile-card profile-1">
+                <div class="profile-avatar">K</div>
+                <div class="profile-info">
+                    <h3>Kiratnoor Kaur</h3>
+                    <p>Mentor: Harpreet Kaur</p>
+                </div>
+            </div>
+            <div class="profile-card profile-2">
+                <div class="profile-avatar">I</div>
+                <div class="profile-info">
+                    <h3>Ishika Aggarwal</h3>
+                    <p>Mentor: Shivani Gautam</p>
+                </div>
+            </div>
+        </div>
+
+        <form id="habit-form" class="input-group">
+            <input type="text" id="habit-input" placeholder="What habit do you want to build?" required autocomplete="off">
+            <button type="submit" class="btn glow-btn" id="add-btn">Add Habit</button>
+        </form>
+
+        <div id="loading-spinner" class="hidden">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="toast-container"></div>
+
+        <div class="habits-list" id="habits-list">
+            <!-- Habit cards will be dynamically injected here via JS -->
+        </div>
+        
+        <div id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">🌱</div>
+            <h2>No habits yet</h2>
+            <p>Start your journey by adding a habit above!</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
